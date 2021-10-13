@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">www.guruji.app</domain>
+        <domain includeSubdomains="true">image.guruji.app</domain>
+        <domain includeSubdomains="true">image-aws.guruji.app</domain>
+        <domain includeSubdomains="true">api.guruji.app</domain>
+        <domain includeSubdomains="true">img.guruji.app</domain>
+    </domain-config>
+
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+</network-security-config>
