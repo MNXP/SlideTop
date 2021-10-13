@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     if (bottomRv != null && bottomRv.getLayoutManager() instanceof LinearLayoutManager) {
                         LinearLayoutManager layoutManager = (LinearLayoutManager) bottomRv.getLayoutManager();
                         if (layoutManager != null) {
+                            // 根据滑动item设置置顶是否可以滑动
                             int firstCompletelyVisible = layoutManager.findFirstCompletelyVisibleItemPosition();
                             initAppbar(firstCompletelyVisible);
                         }
@@ -109,8 +110,6 @@ public class MainActivity extends AppCompatActivity {
         PhotoAdapter topAdapter = new PhotoAdapter();
         topRv.setAdapter(topAdapter);
         topAdapter.setDataList(4);
-
-
     }
     private boolean isFirstData;
     private int oldPosition = -2;
